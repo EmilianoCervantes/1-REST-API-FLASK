@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "4f66027a-d4a8-400f-b309-fa47e0cb4d0b",
+		"name": "1er-API-UDEMY-Emi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/stores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/stores",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"stores"
+					]
+				},
+				"description": "Peticiones para la primrea app."
+			},
+			"response": []
+		},
+		{
+			"name": "/store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Nueva tienda\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/store",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"store"
+					]
+				},
+				"description": "Agregar una nueva tienda"
+			},
+			"response": []
+		},
+		{
+			"name": "/store/<string:name>/item",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/store/Mi%20Primera%20Tienda/item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"store",
+						"Mi%20Primera%20Tienda",
+						"item"
+					]
+				},
+				"description": "Obtener items tienda a partir de nombre"
+			},
+			"response": []
+		},
+		{
+			"name": "/store/<string:name>/item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"price\": 5.99,\n    \"name\": \"Nuevo producto de estreno\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/store/Nueva%20tienda/item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"store",
+						"Nueva%20tienda",
+						"item"
+					]
+				},
+				"description": "AGREGAR items a la tienda"
+			},
+			"response": []
+		},
+		{
+			"name": "/store/<string:name>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/store/Segunda Tienda",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"store",
+						"Segunda Tienda"
+					]
+				},
+				"description": "Obtener una tienda"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
